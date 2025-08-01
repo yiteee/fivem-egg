@@ -29,8 +29,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: Luxxy-GF
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          username: yiteee
+          password: ${{secrets.GITHUB_TOKEN}}
       -
         name: Build and push
         uses: docker/build-push-action@v2
@@ -40,4 +40,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/yiteee/pterodactyl-fivem:latest
+            ghcr.io/${{ github.repository }}/debian12-fivem:latest
