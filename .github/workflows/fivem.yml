@@ -40,4 +40,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/luxxy-gf/pterodactyl-fivem:latest
+            ghcr.io/yiteee/pterodactyl-fivem:latest
