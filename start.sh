@@ -12,7 +12,7 @@ RELEASE_PAGE=$(curl -sSL https://runtime.fivem.net/artifacts/fivem/build_proot_l
 CHANGELOGS_PAGE=$(curl -sSL https://changelogs-live.fivem.net/api/changelog/versions/linux/server)
 
 if [[ "${AUTO_UPDATE}" == "1" ]]; then
-    DOWNLOAD_LINK=$(echo $CHANGELOGS_PAGE | jq -r '.latest_download')
+    DOWNLOAD_LINK=https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/17871-99befdc6f983885637b3011fb8dc3898dfd52e91/fx.tar.xz
     rm -rf /home/container/alpine > /dev/null 2>&1
     echo -e "${Text} ${BLUE}Updating CitizenFX Resource Files...${NC}"
     curl -sSL ${DOWNLOAD_LINK} -o ${DOWNLOAD_LINK##*/} > /dev/null 2>&1
